@@ -1,5 +1,4 @@
 ﻿using HomeWorkOne.Clock.Service;
-using System;
 
 namespace HomeWorkOne
 {
