@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AlgorithmizationAndProgramming
+﻿namespace LaboratoryOne.Util
 {
     public static class MathUtil
     {

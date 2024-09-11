@@ -1,8 +1,8 @@
-﻿using System;
+﻿using LaboratoryOne.Util;
 
-namespace AlgorithmizationAndProgramming
+namespace LaboratoryOne
 {
-    public class Program
+    public class Starter
     {
         public static void Main(string[] args)
         {
@@ -20,7 +20,6 @@ namespace AlgorithmizationAndProgramming
             {
                 Console.WriteLine("Введено не число");
             }
-            Console.ReadLine();
         }
     }
 }
