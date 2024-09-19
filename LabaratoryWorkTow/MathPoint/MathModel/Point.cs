@@ -1,6 +1,8 @@
-﻿namespace LabaratoryWorkTow.Point.MathModel
+﻿using System;
+
+namespace LabaratoryWorkTow.MathPoint.MathModel
 {
-    public class Point
+    public class Point : IEquatable<Point>
     {
         private double x;
         private double y;
@@ -20,8 +22,8 @@
             get { return y; }
         }
 
-        public bool isEquelPoint(Point point) {
-            return point.X == this.X && point.Y == this.Y;
+        public bool Equals(Point point) {
+            return point != null && point.X == this.X && point.Y == this.Y;
         }
     }
 }
