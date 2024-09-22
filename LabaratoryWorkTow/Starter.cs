@@ -37,18 +37,18 @@ namespace LabaratoryWorkTow
                 bool result = planeMath.PointsBelongToSameHalfPlane(abPoint, cdPoint, efPoint, ghPoint);
                 string resultAsString = result ? "Лежат на одной полуплоскости" : "Не лежат на одной полуплоскости";
 
-                Console.WriteLine("Точни AB и CD: " + resultAsString);
+                Console.WriteLine("Ошибка: Точни AB и CD: " + resultAsString);
             }
             catch (EqualsPointException ex)
             {
-                Console.WriteLine("Точки EF и GH - равны");
+                Console.WriteLine("Ошибка: Точки EF и GH - равны");
             }
             catch (PointOnLineException ex)
             {
-                Console.WriteLine("Точка AB или CD - лежит на одной прямой L (L - проходящей через точки EF и GH)");
+                Console.WriteLine("Ошибка: Точка AB или CD - лежит на одной прямой L (L - проходящей через точки EF и GH)");
             }
             catch (FormatException ex) {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Ошибка: " + ex.Message);
             }
         }
 
