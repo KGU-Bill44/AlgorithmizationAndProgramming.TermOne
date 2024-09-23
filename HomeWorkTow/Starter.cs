@@ -22,7 +22,8 @@ namespace HomeWorkTow
                 {
                     CircleResult.IN_FIRST_RANGE => "Точка входит в граници первого круга",
                     CircleResult.OUT_SECODN_RANGE => "Точка выходит за граници второго круга",
-                    CircleResult.IN_INVALID_ZONE => "Точка не может входить в зону между радиусом первого и второго кругов"
+                    CircleResult.IN_INVALID_ZONE => "Точка не может входить в зону между радиусом первого и второго кругов",
+                    CircleResult.ON_BOARD => "Точка находится на границе круга"
                 };
 
                 Console.WriteLine(resultESituationAsString);

@@ -4,6 +4,7 @@
     {
         IN_FIRST_RANGE,
         OUT_SECODN_RANGE,
-        IN_INVALID_ZONE
+        IN_INVALID_ZONE,
+        ON_BOARD
     }
 }

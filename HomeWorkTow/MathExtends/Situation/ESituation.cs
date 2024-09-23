@@ -15,9 +15,12 @@ namespace HomeWorkTow.MathExtends.Situation
                 return CircleResult.IN_FIRST_RANGE;
             } else if (CircleMathUtil.PointOutOfCircle(point, RadiusSecondCircle)) {
                 return CircleResult.OUT_SECODN_RANGE;
+            } else if (CircleMathUtil.PointOnCircle(point, RadiusSecondCircle)
+                || CircleMathUtil.PointOnCircle(point, RadiusFerstCircle)) {
+                return CircleResult.ON_BOARD;
             } else {
                 return CircleResult.IN_INVALID_ZONE;
             }
-        } 
+        }
     }
 }
