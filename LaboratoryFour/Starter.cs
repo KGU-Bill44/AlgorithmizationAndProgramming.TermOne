@@ -22,7 +22,7 @@
                 double sum = 0;
                 for (int indextOfNumber = 1; indextOfNumber <= countOfNumbers; indextOfNumber++)
                 {
-                    double anyNum = getDoubleFromConsole($"Введите {indextOfNumber} число:", "0,##");
+                    double anyNum = getDoubleFromConsole($"Введите {indextOfNumber} число: ", "0,##");
                     sum += anyNum;
                 }
                 Console.WriteLine($"Сумма получившиеся чисел: {sum:F3}.");
