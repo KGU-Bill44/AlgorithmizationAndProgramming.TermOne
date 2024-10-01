@@ -1,6 +1,5 @@
-﻿using LaboratoryThree.TimeModel;
+﻿using HomeWorkThree.Model;
 using LaboratoryThree.Util;
-using System.Runtime.InteropServices.JavaScript;
 
 namespace LaboratoryThree
 {
@@ -13,23 +12,28 @@ namespace LaboratoryThree
 
             try
             {
-                ushort day = GetUshort("день", TimeUtil.DayRange);
-                ushort month = GetUshort("день", TimeUtil.MonthRange);
+                ushort month = GetUshort("месяц", 1, 12);
+                ushort maxMonthDay = TimeUtil.getMaxDayByMonth(month);
+                ushort day = GetUshort("день", 1, maxMonthDay);
 
-                Console.WriteLine("Предыдущая дата была:" + TimeUtil.GetDayBefore(day, month));
+                NumberUtil.CheckRange(month, 1, 12);
+                NumberUtil.CheckRange(day, 1, maxMonthDay);
+
+                TimeDMModel model = TimeUtil.minusDays(day, month, 1);
+                Console.WriteLine("Предыдущая дата была: " + model.Day + " - " + model.Month);
             }
             catch (FormatException ex)
             {
-                Console.WriteLine("Ошибка" + ex.Message);
+                Console.WriteLine("Ошибка: " + ex.Message);
             }
             catch (ArgumentOutOfRangeException ex) {
-                Console.WriteLine("Ошибка:" + ex.InnerException);
+                Console.WriteLine("Ошибка: " + ex.ParamName);
             }
         }
 
-        private static ushort GetUshort(string nameOfVar, RangeOfTime range)
+        private static ushort GetUshort(string nameOfVar, int minValue, int maxValue)
         {
-            Console.Write($"Введинте, пожалусто, {nameOfVar}, значение ожидается в формате ##0,## и в границах от {range.MinValue} и до {range.MaxValue}:");
+            Console.Write($"Введинте, пожалусто, {nameOfVar}, значение ожидается в формате ##0 и в границах от {minValue} и до {maxValue}: ");
             string anyString = Console.ReadLine();
             if (ushort.TryParse(anyString, out ushort namber))
             {
