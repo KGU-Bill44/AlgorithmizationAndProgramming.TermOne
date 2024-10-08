@@ -24,7 +24,7 @@ namespace LaboratoryThree.Equations
 
         public ResultQuadraticEquation getRoot()
         {
-            if (controlSum.Equals("111"))
+            if (controlSum[0].Equals('1'))
             {
                 double d = Math.Pow(coofB, 2) - (4 * A * C);
 
@@ -45,48 +45,18 @@ namespace LaboratoryThree.Equations
 
                 return new ResultQuadraticEquation("Дейсвительных корней нет");
             }
+            else if (controlSum.StartsWith("01"))
+            {
+                double result = -C / (B);
+                return new ResultQuadraticEquation(result);
+            }
+            else if (controlSum.StartsWith("001"))
+            {
+                return new ResultQuadraticEquation("Решения нет");
+            }
             else
             {
-                if (controlSum.StartsWith("1"))
-                {
-                    if (controlSum[1].Equals('1'))
-                    {
-                        double result = -B / (A);
-                        return new ResultQuadraticEquation(0, result);
-                    }
-                    else
-                    {
-                        if (C < 0 || A < 0)
-                        {
-                            double result = Math.Sqrt(-C / (A));
-                            return new ResultQuadraticEquation(-result, result);
-                        }
-                        else
-                        {
-                            return new ResultQuadraticEquation("Дейсвительных корней нет");
-                        }
-                    }
-                }
-                else if (controlSum.StartsWith("01"))
-                {
-                    if (controlSum[2].Equals('1'))
-                    {
-                        double result = -C / (B);
-                        return new ResultQuadraticEquation(result);
-                    }
-                    else
-                    {
-                        return new ResultQuadraticEquation(0, 0);
-                    }
-                }
-                else if (controlSum.StartsWith("001"))
-                {
-                    return new ResultQuadraticEquation("Решения нет");
-                }
-                else
-                {
-                    return new ResultQuadraticEquation("X - любое");
-                }
+                return new ResultQuadraticEquation("X - любое");
             }
         }
 
