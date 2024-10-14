@@ -25,15 +25,14 @@
 
             if (uint.TryParse(coorAsString, out uint parsedX))
             {
+                if (parsedX < 2)
+                {
+                    throw new ValidationException("Число не может быть меньше 2");
+                }
                 return parsedX;
             }
             else
             {
-                if (int.TryParse(coorAsString, out int negativeNumber) && negativeNumber < 2)
-                {
-                    throw new ValidationException("Число не может быть меньше 2");
-                }
-
                 throw new FormatException($"Не верно введен формат числа {numberName}: {coorAsString}. Ожидается число в формате ###0");
             }
         }
