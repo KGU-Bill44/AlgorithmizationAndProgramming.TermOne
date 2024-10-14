@@ -11,17 +11,20 @@
             else if (anyNumber % 3 == 0)
             {
                 return 3;
-            } else if (anyNumber % 5 == 0)
+            }
+            else if (anyNumber % 5 == 0)
             {
                 return 5;
             }
 
-            for (uint i = 7; i < anyNumber; i = GetNextSimplNumberAfter(i))
+            uint i = 7;
+            while (i < anyNumber)
             {
                 if (anyNumber % i == 0)
                 {
                     return i;
                 }
+                i = GetNextSimplNumberAfter(i);
             }
 
             return anyNumber;
@@ -30,12 +33,14 @@
         public static uint GetNextSimplNumberAfter(uint someNumber)
         {
             uint nextNumber = someNumber % 2 == 0 ? someNumber + 1 : someNumber + 2;
-            for (int shift = 2; shift < nextNumber; shift++)
-            {
+            int shift = 2;
+
+            while (shift < nextNumber) {
                 if (nextNumber % shift == 0)
                 {
                     nextNumber = nextNumber + 2;
                 }
+                shift = shift + 1;
             }
 
             return nextNumber;
