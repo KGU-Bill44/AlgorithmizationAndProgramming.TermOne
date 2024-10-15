@@ -13,10 +13,8 @@
 
             while (result && number > 0)
             {
-                int countOfDigist = number.ToString().Length - 1;
-                int maximumDigitOfNumber = (int)Math.Pow(10, countOfDigist);
-                int digistOfNumber = number / maximumDigitOfNumber;
-                number = number % maximumDigitOfNumber;
+                int digistOfNumber = number % 10;
+                number = number / 10;
 
                 int setrNumber = number;
 

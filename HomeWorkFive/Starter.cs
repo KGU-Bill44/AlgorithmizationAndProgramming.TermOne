@@ -11,7 +11,7 @@
             try
             {
                 uint N = getNumber("N");
-                Console.WriteLine("Наименьший общий делитьель чила N: " + MathUtil.SmallestNaturalDivisor(N));
+                Console.WriteLine("Наименьший натуральный делитьель чила N: " + MathUtil.SmallestNaturalDivisor(N));
             }
             catch (Exception ex)
             {
@@ -21,6 +21,7 @@
 
         private static uint getNumber(string numberName)
         {
+            Console.WriteLine($"Введите число {numberName}: ");
             string? coorAsString = Console.ReadLine();
 
             if (uint.TryParse(coorAsString, out uint parsedX))

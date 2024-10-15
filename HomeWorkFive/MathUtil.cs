@@ -4,20 +4,7 @@
     {
         public static uint SmallestNaturalDivisor(uint anyNumber)
         {
-            if (anyNumber % 2 == 0)
-            {
-                return 2;
-            }
-            else if (anyNumber % 3 == 0)
-            {
-                return 3;
-            }
-            else if (anyNumber % 5 == 0)
-            {
-                return 5;
-            }
-
-            uint i = 7;
+            uint i = 2;
             while (i < anyNumber)
             {
                 if (anyNumber % i == 0)
