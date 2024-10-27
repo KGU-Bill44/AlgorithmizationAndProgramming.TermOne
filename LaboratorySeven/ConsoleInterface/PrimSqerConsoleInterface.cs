@@ -29,14 +29,6 @@ namespace LaboratorySeven.ConsoleInterface
                     Console.WriteLine("Число не является квадартом простого числа.");
                 }
             }
-            catch (ZeroException e)
-            {
-                Console.WriteLine("Был введен 0");
-            }
-            catch (NegativeNumberException e)
-            {
-                Console.WriteLine("Было передано число меньше 0");
-            }
             catch (FormatException e)
             {
                 Console.WriteLine("Введеная строка не соответсвует формату числа");
@@ -47,7 +39,7 @@ namespace LaboratorySeven.ConsoleInterface
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Ошибка: " + ex.Message);
             }
         }
 
