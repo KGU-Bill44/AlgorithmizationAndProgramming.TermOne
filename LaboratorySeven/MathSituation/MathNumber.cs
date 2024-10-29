@@ -13,18 +13,13 @@ namespace LaboratorySeven.MathSituation
         /// </summary>
         /// <param name="anyNamber">Положительное число, отличное от нуля.</param>
         /// <returns>Возвращает true, если чило квадрат просто числа, иначе false</returns>
-        /// <exception cref="NegativeNumberException">Если число меньше 0</exception>
+        /// <exception cref="NotSimpleNumberException">Если число меньше 0</exception>
         /// <exception cref="ZeroException">Если число 0</exception>
         public static bool IsNumberSquareOfPrimeNumber(long anyNamber)
         {
-            if (anyNamber < 0)
+            if (anyNamber <= 0)
             {
-                throw new NegativeNumberException($"Число {anyNamber} меньше 0");
-            }
-
-            if (anyNamber == 0)
-            {
-                throw new ZeroException("Число равно " + anyNamber);
+                throw new NotSimpleNumberException($"Число {anyNamber} не натуральное");
             }
 
             double rootOfNumber = Math.Sqrt(anyNamber);

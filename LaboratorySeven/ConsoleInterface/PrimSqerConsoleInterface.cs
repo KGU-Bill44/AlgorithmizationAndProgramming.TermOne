@@ -1,6 +1,4 @@
-﻿
-using LaboratorySeven.MathExceptions;
-using LaboratorySeven.MathSituation;
+﻿using LaboratorySeven.MathSituation;
 
 namespace LaboratorySeven.ConsoleInterface
 {
