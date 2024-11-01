@@ -27,11 +27,11 @@ namespace LaboratorySeven.ConsoleInterface
                     Console.WriteLine("Число не является квадартом простого числа.");
                 }
             }
-            catch (FormatException e)
+            catch (FormatException)
             {
                 Console.WriteLine("Введеная строка не соответсвует формату числа");
             }
-            catch (OverflowException e)
+            catch (OverflowException)
             {
                 Console.WriteLine("Число вышло за рамки допустимых значений");
             }

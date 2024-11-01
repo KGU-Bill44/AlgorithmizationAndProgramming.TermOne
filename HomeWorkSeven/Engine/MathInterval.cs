@@ -19,7 +19,7 @@ namespace HomeWorkSeven.Engine
         /// <returns>Строка, стотоящая из простых чисел интервала</returns>
         /// <exception cref="NegativeNumberException">Возникает при указании одного конца меньше нуля</exception>
         /// <exception cref="InconsistencyIntervalEndException">Возникает при условии, что начсальный конец больше, чем конечный</exception>
-        public static string Interval(int firstEnd, int secondEnd)
+        public static void Interval(int firstEnd, int secondEnd)
         {
             ValidateIntevalEnds(firstEnd, secondEnd);
 
@@ -29,15 +29,12 @@ namespace HomeWorkSeven.Engine
             }
 
             uint nextSimplNumber = GetNextSimpleNumberAfter(Convert.ToUInt32(firstEnd));
-            StringBuilder stringBuilder = new StringBuilder();
 
             while (nextSimplNumber <= secondEnd)
             {
-                stringBuilder.Append(" " + nextSimplNumber);
+                InfoOutputer.OutputConsole(nextSimplNumber + " ");
                 nextSimplNumber = GetNextSimpleNumberAfter(nextSimplNumber);
             }
-
-            return stringBuilder.ToString();
         }
 
         /// <summary>

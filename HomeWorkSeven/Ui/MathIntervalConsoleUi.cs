@@ -12,15 +12,7 @@ namespace HomeWorkSeven.Ui
             {
                 int firstEnd = GetNumberFromConsole("первый конец");
                 int secondEnd = GetNumberFromConsole("второй конец");
-                string result = MathInterval.Interval(firstEnd, secondEnd);
-                if (string.IsNullOrEmpty(result))
-                {
-                    Console.WriteLine($"Простых числел на промежутке от {firstEnd} до {secondEnd} не существует.");
-                }
-                else
-                {
-                    Console.WriteLine($"Простые числа с промежутка от {firstEnd} до {secondEnd}:" + result);
-                }
+                MathInterval.Interval(firstEnd, secondEnd);
             }
             catch (FormatException e)
             {
