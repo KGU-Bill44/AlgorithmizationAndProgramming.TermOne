@@ -26,11 +26,11 @@ namespace LaboratoryEight.Engine
                 double minimalOfArray = FindMinimal(array);
                 return FindMaximumSequenceBy(minimalOfArray, array);
             }
-            catch (ArrayEmptyException e)
+            catch (ArrayEmptyException)
             {
                 return 0;
             }
-            catch (ArgumentNullException ex)
+            catch (ArgumentNullException)
             {
                 return -1;
             }
