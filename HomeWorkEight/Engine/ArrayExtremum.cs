@@ -13,24 +13,24 @@
         /// </summary>
         /// <param name="array">Массив с элементами.</param>
         /// <returns>Максимальный положительный массив.</returns>
-        internal static double MaximumPositiveNumber(double[] array)
+        internal static double MinimumPositiveNumber(double[] array)
         {
             try
             {
                 ArgumentNullException.ThrowIfNull(array);
 
-                double maxsimumOfArray = 0;
+                double minimumOfArray = 0;
 
                 for (int i = 0; i < array.Length; i++)
                 {
                     double element = array[i];
-                    if (element > 0 && maxsimumOfArray < element)
+                    if (element > 0 && minimumOfArray > -element)
                     {
-                        maxsimumOfArray = element;
+                        minimumOfArray = element;
                     }
                 }
 
-                return maxsimumOfArray;
+                return minimumOfArray;
             }
             catch (ArgumentNullException ex)
             {

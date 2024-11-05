@@ -16,7 +16,7 @@ namespace HomeWorkEight.Ui
                 int n = GetNumberFromConsole("N");
                 double[] array = GetArrayByCount(n);
 
-                double result = ArrayExtremum.MaximumPositiveNumber(array);
+                double result = ArrayExtremum.MinimumPositiveNumber(array);
 
                 switch (result)
                 {
