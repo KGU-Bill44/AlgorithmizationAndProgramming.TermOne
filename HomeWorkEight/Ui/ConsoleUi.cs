@@ -1,4 +1,6 @@
-﻿namespace HomeWorkEight.Ui
+﻿using HomeWorkEight.Engine;
+
+namespace HomeWorkEight.Ui
 {
     internal static class ConsoleUi
     {
@@ -13,6 +15,18 @@
             {
                 int n = GetNumberFromConsole("N");
                 double[] array = GetArrayByCount(n);
+
+                double result = ArrayExtremum.MaximumPositiveNumber(array);
+
+                switch (result)
+                {
+                    case -1:
+                        Console.WriteLine("Массив - null");
+                        break;
+                    default:
+                        Console.WriteLine("Положительное число в массиве: " + result);
+                        break;
+                }
             }
             catch (FormatException)
             {
@@ -61,7 +75,10 @@
         private static void PrintInfoTask()
         {
             Console.Write(
-                "Программа высчитывает максимальную последовательность минимальных элементов массива, составленого пользовательем. \n");
+                "Программа высчитывает минимальное\n" +
+                "положительное число из набора чисел. \n" +
+                "Если положительные числа в наборе\n" +
+                "отсутствуют, то выводит 0.\n");
         }
 
         /// <summary>
