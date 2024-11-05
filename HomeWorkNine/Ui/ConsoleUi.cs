@@ -16,6 +16,7 @@ namespace HomeWorkNine.Ui
                 int n = GetNumberFromConsole("N");
                 double[] array = GetArrayByCount(n);
                 ArrayEditor.SwopByHalf(array);
+                PrintArray(array);
             }
             catch (FormatException)
             {
@@ -28,6 +29,18 @@ namespace HomeWorkNine.Ui
             catch (Exception e)
             {
                 Console.WriteLine("Ошибка: " + e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Выводит массив на консоль.
+        /// </summary>
+        private static void PrintArray(double[] result)
+        {
+            Console.Write("Сформировани следующий массив: ");
+            for (int i = 0; i < result.Length; i++)
+            {
+                Console.Write($"{result[i]:f1} ");
             }
         }
 
@@ -63,11 +76,7 @@ namespace HomeWorkNine.Ui
         /// </summary>
         private static void PrintInfoTask()
         {
-            Console.Write(
-                "Программа высчитывает минимальное\n" +
-                "положительное число из набора чисел. \n" +
-                "Если положительные числа в наборе\n" +
-                "отсутствуют, то выводит 0.\n");
+            Console.Write("Меняет местами развые части массива, из N элементов.");
         }
 
         /// <summary>
