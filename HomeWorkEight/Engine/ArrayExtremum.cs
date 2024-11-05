@@ -17,10 +17,7 @@
         {
             try
             {
-                if (array == null)
-                {
-                    throw new ArgumentNullException("array is null!");
-                }
+                ArgumentNullException.ThrowIfNull(array);
 
                 double maxsimumOfArray = 0;
 

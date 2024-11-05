@@ -1,8 +1,8 @@
-﻿using LaboratoryNine.Engine;
+﻿using HomeWorkNine.Engine;
 
-namespace LaboratoryNine.Ui
+namespace HomeWorkNine.Ui
 {
-    internal class ConsoleUi
+    internal static class ConsoleUi
     {
         /// <summary>
         /// Вход в консолное прилоджение.
@@ -15,10 +15,7 @@ namespace LaboratoryNine.Ui
             {
                 int n = GetNumberFromConsole("N");
                 double[] array = GetArrayByCount(n);
-
-                double[] result = ArrayStatistics.AverageByElement(array);
-
-                PrintArray(result);
+                ArrayEditor.SwopByHalf(array);
             }
             catch (FormatException)
             {
@@ -31,15 +28,6 @@ namespace LaboratoryNine.Ui
             catch (Exception e)
             {
                 Console.WriteLine("Ошибка: " + e.Message);
-            }
-        }
-
-        private static void PrintArray(double[] result)
-        {
-            Console.Write("Сформировани следующий массив: ");
-            for (int i = 0; i < result.Length; i++)
-            {
-                Console.Write($"{result[i]:f1} ");
             }
         }
 
@@ -76,8 +64,10 @@ namespace LaboratoryNine.Ui
         private static void PrintInfoTask()
         {
             Console.Write(
-                "Программа на вход программа принимает массив из N элемиентов. \n" +
-                "И формирует новый массив из среднеарефметоческого всех элементов от K до N\n");
+                "Программа высчитывает минимальное\n" +
+                "положительное число из набора чисел. \n" +
+                "Если положительные числа в наборе\n" +
+                "отсутствуют, то выводит 0.\n");
         }
 
         /// <summary>

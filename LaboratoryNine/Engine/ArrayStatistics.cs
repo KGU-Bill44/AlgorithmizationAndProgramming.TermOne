@@ -3,6 +3,11 @@ namespace LaboratoryNine.Engine
 {
     internal static class ArrayStatistics
     {
+        /// <summary>
+        /// Возвращает новый массив из среднеарифметического от K до N по каждому элементу по из соответсвующей позиции исходного массива.
+        /// </summary>
+        /// <param name="array">Массив для прообраза.</param>
+        /// <returns>Новый массив, где каждый элемент </returns>
         internal static double[] AverageByElement(double[] array)
         {
             try

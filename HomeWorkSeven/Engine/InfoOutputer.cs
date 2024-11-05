@@ -2,9 +2,9 @@
 {
     internal static class InfoOutputer
     {
-        public static void OutputConsole(object anyObject)
+        public static void OutputConsoleWithWithSpase(object anyObject)
         {
-            Console.Write(anyObject);
+            Console.Write(anyObject + " ");
         }
 
         public static void OutputConsoleLn(object anyObject)

@@ -32,7 +32,7 @@ namespace HomeWorkSeven.Engine
 
             while (nextSimplNumber <= secondEnd)
             {
-                InfoOutputer.OutputConsole(nextSimplNumber + " ");
+                InfoOutputer.OutputConsoleWithWithSpase(nextSimplNumber);
                 nextSimplNumber = GetNextSimpleNumberAfter(nextSimplNumber);
             }
         }
