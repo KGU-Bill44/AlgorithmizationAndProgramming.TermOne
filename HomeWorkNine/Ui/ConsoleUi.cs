@@ -76,7 +76,7 @@ namespace HomeWorkNine.Ui
         /// </summary>
         private static void PrintInfoTask()
         {
-            Console.Write("Меняет местами развые части массива, из N элементов.");
+            Console.Write("Меняет местами развые части массива, из N элементов.\n");
         }
 
         /// <summary>
