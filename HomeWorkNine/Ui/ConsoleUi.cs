@@ -14,6 +14,12 @@ namespace HomeWorkNine.Ui
             try
             {
                 int n = GetNumberFromConsole("N");
+
+                if (n % 2 != 0)
+                {
+                    throw new ArgumentException("Количество элементов - не четное");
+                }
+
                 double[] array = GetArrayByCount(n);
                 ArrayEditor.SwopByHalf(array);
                 PrintArray(array);
@@ -25,6 +31,10 @@ namespace HomeWorkNine.Ui
             catch (OverflowException)
             {
                 Console.WriteLine("Число вышло за рамки допустимых значений");
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
             }
             catch (Exception e)
             {

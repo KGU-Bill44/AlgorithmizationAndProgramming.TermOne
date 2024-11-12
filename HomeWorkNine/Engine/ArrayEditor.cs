@@ -17,11 +17,10 @@
             }
 
             int halfLenght = array.Length / 2;
-            int centerOfArray = array.Length % 2;
 
             for (int index = 0; index < halfLenght; index++)
             {
-                (array[index], array[index + halfLenght + centerOfArray]) = (array[index + halfLenght + centerOfArray], array[index]);
+                (array[index], array[index + halfLenght]) = (array[index + halfLenght], array[index]);
             }
         }
     }
