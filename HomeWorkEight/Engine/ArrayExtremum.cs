@@ -19,18 +19,21 @@
             {
                 ArgumentNullException.ThrowIfNull(array);
 
-                double minimumOfArray = 0;
-
-                for (int i = 0; i < array.Length; i++)
+                if (array.Length == 0)
                 {
-                    double element = array[i];
-                    if (element > 0 && minimumOfArray > -element)
-                    {
-                        minimumOfArray = element;
-                    }
+                    return 0;
                 }
 
-                return minimumOfArray;
+                double minimumOfArray = array[0];
+
+                for (int i = 1; i < array.Length; i++)
+                {
+                    double element = array[i];
+                    minimumOfArray = element > 0 && element < minimumOfArray ? 
+                        element : minimumOfArray;
+                }
+
+                return minimumOfArray < 0 ? 0 : minimumOfArray;
             }
             catch (ArgumentNullException ex)
             {
