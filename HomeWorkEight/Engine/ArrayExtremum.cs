@@ -5,7 +5,6 @@
     /// </summary>
     internal static class ArrayExtremum
     {
-
         /// <summary>
         /// Ищит минимальный положительный элемент из массива. <br/>
         /// Если в массиве нет положительного элемента, то вернется 0. <br/>
@@ -24,18 +23,23 @@
                     return 0;
                 }
 
-                double minimumOfArray = array[0];
+                double minimumOfArray = double.MaxValue;
 
-                for (int i = 1; i < array.Length; i++)
+                for (int i = 0; i < array.Length; i++)
                 {
                     double element = array[i];
-                    minimumOfArray = element > 0 && element < minimumOfArray ? 
-                        element : minimumOfArray;
+                    if (element > 0)
+                    {
+                        if (element < minimumOfArray)
+                        {
+                            minimumOfArray = element;
+                        }
+                    }
                 }
 
-                return minimumOfArray < 0 ? 0 : minimumOfArray;
+                return minimumOfArray == double.MaxValue ? 0 : minimumOfArray;
             }
-            catch (ArgumentNullException ex)
+            catch (ArgumentNullException)
             {
                 return -1;
             }
