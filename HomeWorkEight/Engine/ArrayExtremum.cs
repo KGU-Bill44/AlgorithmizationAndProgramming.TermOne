@@ -28,7 +28,7 @@
                 for (int i = 0; i < array.Length; i++)
                 {
                     double element = array[i];
-                    if (element > 0)
+                    if (element >= 0)
                     {
                         if (element < minimumOfArray)
                         {
