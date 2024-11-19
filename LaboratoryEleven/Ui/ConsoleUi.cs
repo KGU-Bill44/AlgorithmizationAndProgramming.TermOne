@@ -1,10 +1,10 @@
-﻿using HomeWorkTen.Engine;
+﻿using LaboratoryElevenLib.Array;
 
-namespace HomeWorkTen.Ui
+namespace LaboratoryEleven.Ui;
+
+public static class ConsoleUi
 {
-    public class ConsoleUi
-    {
-        /// <summary>
+    /// <summary>
         /// Вход в консолное прилоджение.
         /// </summary>
         public static void Run()
@@ -21,9 +21,9 @@ namespace HomeWorkTen.Ui
                 }
 
                 double[,] matrix = GetQuadraticMatrixCounts(n);
-                double result = MatrixDiagonals.AverageSideDiagonal(matrix);
+                double[][] result = StepArray.CreateByRule(matrix);
 
-                Console.WriteLine($"Среднеарифметическое матициы = {result:f2}");
+                Console.WriteLine("Среднеарифметическое матициы = " + result);
             }
             catch (FormatException)
             {
@@ -90,7 +90,7 @@ namespace HomeWorkTen.Ui
         /// </summary>
         private static void PrintInfoTask()
         {
-            Console.Write("Программа находить среднее арефметическое побочной диаганали квадратной матрицы.\n");
+            //Console.Write("Программа находить среднее арефметическое побочной диаганали квадратной матрицы.\n");
         }
 
         /// <summary>
@@ -104,5 +104,4 @@ namespace HomeWorkTen.Ui
             string anyString = Console.ReadLine();
             return int.Parse(anyString);
         }
-    }
 }
