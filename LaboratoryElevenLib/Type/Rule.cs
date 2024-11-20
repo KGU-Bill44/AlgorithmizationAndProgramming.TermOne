@@ -3,5 +3,7 @@
 public enum Rule
 {
     ElementsAboveMainDiagonal,
-    ElementsMultiplesOfThree
+    ElementsMultiplesOfThree,
+    SumOfEvenElementsByColumns,
+    ElementsColumnMaximum
 }
