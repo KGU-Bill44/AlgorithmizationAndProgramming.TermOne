@@ -2,8 +2,17 @@
 
 namespace LaboratoryElevenLib.Array
 {
+    /// <summary>
+    /// Создает массив по переданным правилам.
+    /// </summary>
     internal static class ArrayRuleCreator
     {
+        /// <summary>
+        /// Создает массив по 1 переданному правилу.
+        /// </summary>
+        /// <param name="matrix">Квадратная матрица.</param>
+        /// <param name="rule">Привило построения массива.</param>
+        /// <returns>Массив из элементов, после применения правила.</returns>
         public static double[] GetArrayFromMatrixByRule(double[,] matrix, Rule rule)
         {
             return rule switch
@@ -15,7 +24,13 @@ namespace LaboratoryElevenLib.Array
             };
         }
 
-        public static double[][] GetArrayFromMatrixByRule(double[,] matrix, params Rule[] rules)
+        /// <summary>
+        /// Создает массив по правилам.
+        /// </summary>
+        /// <param name="matrix">Квадратная матрица.</param>
+        /// <param name="rules">Привила построения массива.</param>
+        /// <returns>Массив из элементов, после применения правил.</returns>
+        public static double[][] GetArrayFromMatrixByRule(double[,] matrix, Rule[] rules)
         {
             double[][] array = new double[rules.Length][];
 

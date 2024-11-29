@@ -1,22 +1,25 @@
-﻿using LaboratoryElevenLib.Matrix;
+﻿using LaboratoryElevenLib.Input;
 using LaboratoryElevenLib.Type;
 
 namespace LaboratoryElevenLib.Array;
 
 public static class StepArray
 {
-    public static double[][] CreateByRule(double[,] matrix)
+    /// <summary>
+    /// Заготовленный набор правил, для задачи.
+    /// </summary>
+    public static void Do(double[,] matrix)
     {
-        MarkingMatrix markingMatrix = MatrixConvention.GetMarkingMatrix(matrix);
-
-        /*if (lengthOfMatrixByColumn != lengthOfMatrixByRow)
-        {
-            matrix = CreateSquareMatrix
-        }*/
-
-        return ArrayRuleCreator.GetArrayFromMatrixByRule(matrix, Rule.ElementsAboveMainDiagonal,
+        ConsoleOutput.PrintStruct(matrix);
+        
+        double[][] result = ArrayRuleCreator.GetArrayFromMatrixByRule(matrix,
+        [
+            Rule.ElementsAboveMainDiagonal,
             Rule.ElementsMultiplesOfThree,
             Rule.SumOfEvenElementsByColumns,
-            Rule.ElementsColumnMaximum);
+            Rule.ElementsColumnMaximum
+        ]);
+
+        ConsoleOutput.PrintStruct(result);
     }
 }

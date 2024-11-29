@@ -11,6 +11,7 @@ public static class ConsoleUi
     {
         PrintWelcome();
         PrintInfoTask();
+        Console.WriteLine();
         try
         {
             int n = GetNumberFromConsole("размер квадратичной матрицы N");
@@ -21,9 +22,7 @@ public static class ConsoleUi
             }
 
             double[,] matrix = GetQuadraticMatrixCounts(n);
-            double[][] result = StepArray.CreateByRule(matrix);
-
-            PrintArray(result);
+            StepArray.Do(matrix);
         }
         catch (FormatException)
         {
@@ -40,22 +39,6 @@ public static class ConsoleUi
         catch (Exception e)
         {
             Console.WriteLine("Ошибка: " + e.Message);
-        }
-    }
-
-    /// <summary>
-    /// Выводит массив на консоль.
-    /// </summary>
-    private static void PrintArray(double[][] result)
-    {
-        Console.WriteLine("Результат: ");
-        foreach (double[] id in result)
-        {
-            foreach (double value in id)
-            {
-                Console.Write($"{value} \t");
-            }
-            Console.WriteLine();
         }
     }
 
@@ -94,7 +77,11 @@ public static class ConsoleUi
     /// </summary>
     private static void PrintInfoTask()
     {
-        //Console.Write("Программа находить среднее арефметическое побочной диаганали квадратной матрицы.\n");
+        Console.Write("Программа из квадратоной матрицы создает ступечатый массив из 4 строк по следующий правилам:\n" +
+                      "а) Элементы заданного массива, расположенных над главной диагональю.\n" +
+                      "б) Элементы заданного массива, кратных трем.\n" +
+                      "в) Каждый элемент равен сумме четных положительных элементов в соот. столбцу.\n" +
+                      "г) Каждый элемент равен наибольшему по модулю элементу.\n");
     }
 
     /// <summary>

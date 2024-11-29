@@ -1,17 +1,21 @@
 ﻿namespace LaboratoryElevenLib.Matrix;
 
+/// <summary>
+/// Форматер матрицы - преобразуетм матрицу в другой объект.
+/// </summary>
 public class MatrixFormatter
 {
+    /// <summary>
+    /// Создает пустой массив из максимального количесва элементов в матрице.
+    /// </summary>
     private static double[] GetMaximalArrayByMatrixLength(int lengthOfMatrixOne, int lengthOfMatrixTow)
     {
         return new double[lengthOfMatrixOne * lengthOfMatrixTow];
     }
-    
-    public static double[] GetMaximalArrayByMatrixLength(int lengthOfMatrix)
-    {
-        return GetMaximalArrayByMatrixLength(lengthOfMatrix, lengthOfMatrix);
-    }
 
+    /// <summary>
+    /// Создает пустой массив из максимального количесва элементов в матрице.
+    /// </summary>
     public static double[] GetEmptyArrayByMatrix(double[,] matrix)
     {
         MarkingMatrix markingMatrix = MatrixConvention.GetMarkingMatrix(matrix);
