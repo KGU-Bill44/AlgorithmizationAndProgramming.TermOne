@@ -12,7 +12,7 @@ public static class StepArray
     {
         ConsoleOutput.PrintStruct(matrix);
         
-        double[][] result = ArrayRuleCreator.GetArrayFromMatrixByRule(matrix,
+        string[] result = ArrayRuleCreator.GetArrayFromMatrixByRule(matrix,
         [
             Rule.ElementsAboveMainDiagonal,
             Rule.ElementsMultiplesOfThree,

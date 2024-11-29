@@ -24,15 +24,12 @@ internal static class ConsoleOutput
     /// <summary>
     /// Выводит массив на консоль.
     /// </summary>
-    public static void PrintStruct(double[][] result)
+    public static void PrintStruct(string[] result)
     {
         Console.WriteLine("Результат: ");
-        foreach (double[] id in result)
+        foreach (string resString in result)
         {
-            foreach (double value in id)
-            {
-                Console.Write($"{value:f1} \t");
-            }
+            Console.Write($"{resString} \n");
         }
     }
 }
