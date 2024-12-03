@@ -32,16 +32,7 @@ namespace LaboratoryElevenLib.Array
         /// <returns>Массив из элементов, после применения правилам в виде строки</returns>
         public static string GetArrayAsStringFromMatrixByRule(double[,] matrix, Rule rule)
         {
-            double[] array;
-
-            array = rule switch
-            {
-                Rule.ElementsAboveMainDiagonal => RuleArray.GetElementsAboveMainDiagonal(matrix),
-                Rule.ElementsMultiplesOfThree => RuleArray.GetElementsMultiplesOfThree(matrix),
-                Rule.SumOfEvenElementsByColumns => RuleArray.GetSumOfEvenElementsByColumns(matrix),
-                Rule.ElementsColumnMaximum => RuleArray.GetElementsColumnMaximum(matrix)
-            };
-
+            double[] array = GetArrayFromMatrixByRule(matrix, rule);
             return string.Join(", ", array);
         }
 
