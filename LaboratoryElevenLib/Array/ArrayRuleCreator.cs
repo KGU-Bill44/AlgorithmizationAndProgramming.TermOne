@@ -1,4 +1,5 @@
-﻿using LaboratoryElevenLib.Type;
+﻿using LaboratoryElevenLib.Input;
+using LaboratoryElevenLib.Type;
 
 namespace LaboratoryElevenLib.Array
 {
@@ -25,33 +26,18 @@ namespace LaboratoryElevenLib.Array
         }
 
         /// <summary>
-        /// Создает массив по 1 переданному правилу.
-        /// </summary>
-        /// <param name="matrix">Квадратная матрица.</param>
-        /// <param name="rule">Привило построения массива.</param>
-        /// <returns>Массив из элементов, после применения правилам в виде строки</returns>
-        public static string GetArrayAsStringFromMatrixByRule(double[,] matrix, Rule rule)
-        {
-            double[] array = GetArrayFromMatrixByRule(matrix, rule);
-            return string.Join(", ", array);
-        }
-
-        /// <summary>
-        /// Создает массив по правилам.
+        /// Создает массив по правилам и выводи его в консоль.
         /// </summary>
         /// <param name="matrix">Квадратная матрица.</param>
         /// <param name="rules">Привила построения массива.</param>
         /// <returns>Массив из элементов, после применения правил в виде строк.</returns>
-        public static string[] GetArrayFromMatrixByRule(double[,] matrix, Rule[] rules)
+        public static void CreateAndOutArrayFromMatrixByRule(double[,] matrix, Rule[] rules)
         {
-            string[] array = new string[rules.Length];
-
             for (int ruleIndex = 0; ruleIndex < rules.Length; ruleIndex++)
             {
-                array[ruleIndex] = GetArrayAsStringFromMatrixByRule(matrix, rules[ruleIndex]);
+                double[] array = GetArrayFromMatrixByRule(matrix, rules[ruleIndex]);
+                ConsoleOutput.PrintStruct(array, ruleIndex == 0);
             }
-
-            return array;
         }
     }
 }

@@ -12,14 +12,12 @@ public static class StepArray
     {
         ConsoleOutput.PrintStruct(matrix);
         
-        string[] result = ArrayRuleCreator.GetArrayFromMatrixByRule(matrix,
+        ArrayRuleCreator.CreateAndOutArrayFromMatrixByRule(matrix,
         [
             Rule.ElementsAboveMainDiagonal,
             Rule.ElementsMultiplesOfThree,
             Rule.SumOfEvenElementsByColumns,
             Rule.ElementsColumnMaximum
         ]);
-
-        ConsoleOutput.PrintStruct(result);
     }
 }
