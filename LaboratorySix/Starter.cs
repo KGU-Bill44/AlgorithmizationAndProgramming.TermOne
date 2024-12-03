@@ -1,4 +1,4 @@
-﻿namespace LabaratorySix
+﻿namespace LaboratorySix
 {
     public class Starter
     {

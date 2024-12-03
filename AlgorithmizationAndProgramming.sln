@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaboratoryOne", "Laboratory
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWorkOne", "HomeWorkOne\HomeWorkOne.csproj", "{3BA4A7BF-1F58-4326-A3C6-A64AEE4ABA7C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabaratoryTwo", "LabaratoryTwo\LabaratoryTwo.csproj", "{60953127-49EC-4F78-9BB4-3C641D8A2B91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaboratoryTwo", "LaboratoryTwo\LaboratoryTwo.csproj", "{60953127-49EC-4F78-9BB4-3C641D8A2B91}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWorkTwo", "HomeWorkTwo\HomeWorkTwo.csproj", "{2CCC4170-2DB0-454F-A9E1-C49C67DE26B4}"
 EndProject
@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaboratoryFive", "Laborator
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWorkFive", "HomeWorkFive\HomeWorkFive.csproj", "{39F21C26-F2F5-4F10-B840-1D30B10676A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabaratorySix", "LabaratorySix\LabaratorySix.csproj", "{F6EA52A3-CEC7-41B4-92BE-822A041E666E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaboratorySix", "LaboratorySix\LaboratorySix.csproj", "{F6EA52A3-CEC7-41B4-92BE-822A041E666E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWorkSix", "HomeWorkSix\HomeWorkSix.csproj", "{7BAB5C16-846D-4F49-AF37-3F357E52EB69}"
 EndProject
