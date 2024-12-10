@@ -7,15 +7,22 @@
         /// </summary>
         public static void Run()
         {
-            PrintWelcome();
-            PrintInfoTask();
-            
-            string anyString = GetStringFromConsole("главную строку");
-            string pattern = GetStringFromConsole("строку которую заменить");
-            string substring = GetStringFromConsole("строку на которую заменить");
+            try
+            {
+                PrintWelcome();
+                PrintInfoTask();
 
-            anyString = anyString.Replace(pattern, substring);
-            Console.WriteLine("Вывод: " + anyString);
+                string anyString = GetStringFromConsole("главную строку");
+                string pattern = GetStringFromConsole("строку которую заменить");
+                string substring = GetStringFromConsole("строку на которую заменить");
+
+                anyString = anyString.Replace(pattern, substring);
+                Console.WriteLine("Вывод: " + anyString);
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Ошибка: шаблон строки не может быть пустым");
+            }
         }
 
         /// <summary>

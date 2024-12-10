@@ -15,7 +15,7 @@ public static class MatrixDiagonals
 
         if (countOfRows == 0)
         {
-            return 0;
+            throw new ArgumentException("Невозможно всчитать среднее арефметическое у пустой матрцы");
         }
 
         double sum = 0;

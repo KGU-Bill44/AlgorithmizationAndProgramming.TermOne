@@ -49,12 +49,18 @@ namespace HomeWorkTen.Ui
         /// </summary>
         private static void PrintOfMatrix(double[,] matrix)
         {
+            if (matrix.Length == 0)
+            {
+                Console.WriteLine("Матрица пустая");
+                return;
+            }
+
             Console.WriteLine("Получившеяся матрица:");
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    Console.Write($"{matrix[i, j]:f2}\t");  
+                    Console.Write($"{matrix[i, j]:f2}\t");
                 }
                 Console.WriteLine();
             }
