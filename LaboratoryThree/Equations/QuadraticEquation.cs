@@ -2,7 +2,7 @@
 
 namespace LaboratoryThree.Equations
 {
-    internal class QuadraticEquation
+    public class QuadraticEquation
     {
         private double coofA;
         private double coofB;
@@ -22,7 +22,7 @@ namespace LaboratoryThree.Equations
             this.controlSum = controlSum;
         }
 
-        public ResultQuadraticEquation getRoot()
+        public ResultQuadraticEquation GetRoot()
         {
             if (controlSum[0].Equals('1'))
             {

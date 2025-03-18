@@ -10,7 +10,7 @@ internal class Starter
             Console.WriteLine("Программа высчитывает x в случаи когда AX^2 + BX + C = 0");
             Console.WriteLine("Введите коофециенты квадратного уравнения A B C:");
             QuadraticEquation equation = new QuadraticEquation(getCoof("A"), getCoof("B"), getCoof("C"));
-            ResultQuadraticEquation result = equation.getRoot();
+            ResultQuadraticEquation result = equation.GetRoot();
             if (!String.IsNullOrWhiteSpace(result.Error))
             {
                 Console.WriteLine(result.Error);

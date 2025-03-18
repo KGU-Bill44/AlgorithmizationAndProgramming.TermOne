@@ -1,6 +1,6 @@
 ﻿namespace LaboratoryThree.Equations
 {
-    internal class ResultQuadraticEquation
+    public class ResultQuadraticEquation
     {
         public double FirstRoot { get; private set; }
         public double SecondRoot { get; private set; }
