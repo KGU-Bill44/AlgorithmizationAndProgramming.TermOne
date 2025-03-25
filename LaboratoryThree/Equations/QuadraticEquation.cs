@@ -8,27 +8,20 @@ namespace LaboratoryThree.Equations
         private double coofB;
         private double coofC;
 
-        private string controlSum;
-
         public QuadraticEquation(double a, double b, double c)
         {
             this.coofA = a;
             this.coofB = b;
             this.coofC = c;
-
-            string controlSum = $"{Convert.ToInt16(SimpeOperationUtil.SignificantNumber(a))}"
-                + $"{Convert.ToInt16(SimpeOperationUtil.SignificantNumber(b))}"
-                + $"{Convert.ToInt16(SimpeOperationUtil.SignificantNumber(c))}";
-            this.controlSum = controlSum;
         }
 
         public ResultQuadraticEquation GetRoot()
         {
-            if (controlSum[0].Equals('1'))
+            if (coofA != 0)
             {
-                double d = Math.Pow(coofB, 2) - (4 * A * C);
+                double d = Math.Pow(coofB, 2.0) - (4.0 * A * C);
 
-                if (d > 0)
+                if (d > 0.0)
                 {
                     double dSqrt = Math.Sqrt(d);
 
@@ -37,7 +30,7 @@ namespace LaboratoryThree.Equations
 
                     return new ResultQuadraticEquation(rF, rS);
                 }
-                if (d == 0)
+                if (d == 0.0)
                 {
                     double r = (-B) / (2.0 * A);
                     return new ResultQuadraticEquation(r);
@@ -45,12 +38,12 @@ namespace LaboratoryThree.Equations
 
                 return new ResultQuadraticEquation("Дейсвительных корней нет");
             }
-            else if (controlSum.StartsWith("01"))
+            else if (coofB != 0)
             {
                 double result = -C / (B);
                 return new ResultQuadraticEquation(result);
             }
-            else if (controlSum.StartsWith("001"))
+            else if (coofC != 0)
             {
                 return new ResultQuadraticEquation("Решения нет");
             }
